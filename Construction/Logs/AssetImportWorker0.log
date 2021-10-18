@@ -15,11 +15,11 @@ G:/Construction/Construction
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57420
+56287
 Successfully changed project path to: G:/Construction/Construction
 G:/Construction/Construction
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.68 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 22.83 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,81 +35,81 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56052
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56716
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.261489 seconds.
+Registered in 0.001562 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 22.09 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 24.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.280 seconds
+- Completed reload, in  1.047 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3445ms)
-		BeginReloadAssembly (61ms)
+	ReloadAssembly (1047ms)
+		BeginReloadAssembly (60ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1194ms)
+		EndReloadAssembly (330ms)
 			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (122ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (649ms)
+			SetupLoadedEditorAssemblies (126ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (95ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (448ms)
-				BeforeProcessingInitializeOnLoad (11ms)
-				ProcessInitializeOnLoadAttributes (70ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				RefreshPlugins (25ms)
+				BeforeProcessingInitializeOnLoad (10ms)
+				ProcessInitializeOnLoadAttributes (65ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002276 seconds.
+Registered in 0.002385 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.054 seconds
+- Completed reload, in  0.805 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1183ms)
-		BeginReloadAssembly (176ms)
+	ReloadAssembly (806ms)
+		BeginReloadAssembly (134ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (960ms)
-			LoadAssemblies (89ms)
+		EndReloadAssembly (625ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (213ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (436ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (66ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (135ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (162ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (158ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.24 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1396 Unused Serialized files (Serialized files now loaded: 0)
@@ -117,7 +117,7 @@ System memory in use before: 64.9 MB.
 System memory in use after: 65.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1831.
-Total: 2.283800 ms (FindLiveObjects: 0.116900 ms CreateObjectMapping: 0.038800 ms MarkObjects: 2.077800 ms  DeleteObjects: 0.049200 ms)
+Total: 2.354300 ms (FindLiveObjects: 0.113400 ms CreateObjectMapping: 0.031000 ms MarkObjects: 2.158500 ms  DeleteObjects: 0.050300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,121 +132,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.192068 seconds 
-  Import took 0.849549 seconds .
+  path: Assets/Danger/Spikes.fbx
+  artifactKey: Guid(b793a835fb80169418d07b7b7e3575d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Danger/Spikes.fbx using Guid(b793a835fb80169418d07b7b7e3575d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '444cc0e700e14c9c0062f0be0620887c') in 0.142103 seconds 
+  Import took 0.149899 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.872253 seconds.
-  path: Assets/Danger
-  artifactKey: Guid(c14d90094bf329e4abd75c23d1cca657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger using Guid(c14d90094bf329e4abd75c23d1cca657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd15351f0a729a244615e4956555cad35') in 0.003076 seconds 
-  Import took 0.011245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.147730 seconds.
-  path: Assets/Danger/Nail gun texture.png
-  artifactKey: Guid(e139acaf6530d3847b0d0a08b329bc01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/Nail gun texture.png using Guid(e139acaf6530d3847b0d0a08b329bc01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d0a11f931b921b9c68616eb8b4ab1cc') in 0.055716 seconds 
-  Import took 0.070022 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.438687 seconds.
-  path: Assets/Danger/NailGun.blend
-  artifactKey: Guid(41b64d7fa3a08934ca24af806eafd231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/NailGun.blend using Guid(41b64d7fa3a08934ca24af806eafd231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ff0688ec963b87baf955e651fa75519') in 0.768047 seconds 
-  Import took 0.775807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.462115 seconds.
-  path: Assets/Danger/Nailgun.mat
-  artifactKey: Guid(46b81afea6564ab4ca1d3e69a25c4be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/Nailgun.mat using Guid(46b81afea6564ab4ca1d3e69a25c4be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c85df279fffbfdcef7676835a18d2d') in 0.671160 seconds 
-  Import took 1.576982 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.792499 seconds.
-  path: Assets/Danger/Materials
-  artifactKey: Guid(906181e3933e8e44a87f99074c40ce46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/Materials using Guid(906181e3933e8e44a87f99074c40ce46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7763885d81211326116dece0614c7a72') in 0.109913 seconds 
-  Import took 0.880152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.048470 seconds.
-  path: Assets/Danger/Materials/Nail gun texture.mat
-  artifactKey: Guid(3ed384745799d154ab500fb25d55039f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/Materials/Nail gun texture.mat using Guid(3ed384745799d154ab500fb25d55039f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d86d7a1657cad3aacba1eddfb27389f') in 0.259134 seconds 
-  Import took 1.161228 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 156.670202 seconds.
-  path: Assets/Danger/NailGun.fbx
-  artifactKey: Guid(dcb77862164ce804baf04b4ecef32bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Danger/NailGun.fbx using Guid(dcb77862164ce804baf04b4ecef32bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a409b6ea4562413e4a38d066e836a002') in 0.068182 seconds 
-  Import took 0.169828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.351768 seconds.
-  path: Assets/Platforms/Corner platform.fbx
-  artifactKey: Guid(c6960669365f52745ba8b320d785fcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/Corner platform.fbx using Guid(c6960669365f52745ba8b320d785fcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6303b724880fba44aeb8fe7548060fef') in 0.327416 seconds 
-  Import took 0.948989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.063937 seconds.
-  path: Assets/Platforms/girdir 2m #2.fbx
-  artifactKey: Guid(f0bb13db9c6e7df41a6590d170cb6015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/girdir 2m #2.fbx using Guid(f0bb13db9c6e7df41a6590d170cb6015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795143ee112b07342f10e150967049fc') in 0.318514 seconds 
-  Import took 0.915119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.059108 seconds.
-  path: Assets/Platforms/Support beam Model.fbx
-  artifactKey: Guid(94c4b107e97093740b51891d68a8c809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/Support beam Model.fbx using Guid(94c4b107e97093740b51891d68a8c809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdadc6c896ab4a668f3dfc6cab830ccc') in 0.274818 seconds 
-  Import took 1.667955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.169218 seconds.
-  path: Assets/Platforms/girdir 2m #3.fbx
-  artifactKey: Guid(1403268d9806f804abd8088a2f22cc4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/girdir 2m #3.fbx using Guid(1403268d9806f804abd8088a2f22cc4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8205ca810bf7c4837bbfd4879f90e775') in 0.489645 seconds 
-  Import took 1.414802 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.102402 seconds.
-  path: Assets/Platforms/girdir 4m #1.fbx
-  artifactKey: Guid(0a21123ab65808d4d8380174329845dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/girdir 4m #1.fbx using Guid(0a21123ab65808d4d8380174329845dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4973f96959776af10586e35415ea7788') in 0.745431 seconds 
-  Import took 1.107987 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.032047 seconds.
-  path: Assets/Platforms/girdir 2m #1.fbx
-  artifactKey: Guid(a0b0d6afc090b974c9b399051db73073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/girdir 2m #1.fbx using Guid(a0b0d6afc090b974c9b399051db73073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37078c1a95452423f0ca4e5581dc0482') in 0.124584 seconds 
-  Import took 0.314915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.020824 seconds.
-  path: Assets/Platforms/girdir 1m #1.fbx
-  artifactKey: Guid(aa6ae9db87912cf479833bcb5c56ac09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Platforms/girdir 1m #1.fbx using Guid(aa6ae9db87912cf479833bcb5c56ac09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf988eae391627eede4bd662922ffe31') in 0.138388 seconds 
-  Import took 0.285895 seconds .
+  Time since last request: 19.330101 seconds.
+  path: Assets/Danger/Materials/Spikes texture.png
+  artifactKey: Guid(a9d5cf483ae02ee47a07d607adefa8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Danger/Materials/Spikes texture.png using Guid(a9d5cf483ae02ee47a07d607adefa8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73188afd58dcf51bf8c37eea61388981') in 0.019012 seconds 
+  Import took 0.056748 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
