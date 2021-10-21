@@ -67,20 +67,17 @@ public class InputCollector : MonoBehaviour
         
         if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
         {
-            Debug.Log("down2");
             controller.MoveArmDown(2);
         }
         else
         {
             if (!Input.GetKey(KeyCode.Q))
             {
-                Debug.Log("down1");
                 controller.MoveArmDown(1);
 
             }
             if (!Input.GetKey(KeyCode.E))
             {
-                Debug.Log("down");
                 controller.MoveArmDown(0);
 
             }

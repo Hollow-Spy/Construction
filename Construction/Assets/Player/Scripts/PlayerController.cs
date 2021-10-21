@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform OGRightArmPos, OGLeftArmPos;
 
+    public bool isLeftArmUp, isRightArmUp;
     void Awake()
     {
       
@@ -43,15 +44,19 @@ public class PlayerController : MonoBehaviour
         switch(armnum)
         {
             case 1:
+                isRightArmUp = true;
                 RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 rightspring.spring = 10;
                 break;
             case 0:
+                isLeftArmUp = true;
                 LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 leftspring.spring = 10;
 
                 break;
             case 2:
+                isLeftArmUp = true;
+                isRightArmUp = true;
                 LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 rightspring.spring = 10;
@@ -68,12 +73,13 @@ public class PlayerController : MonoBehaviour
         {
             case 1:
                 RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
-
+                isRightArmUp = false;
                 rightspring.spring = 0;
 
                 break;
             case 0:
                 LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
+                isLeftArmUp = false;
                 leftspring.spring = 0;
 
                 break;
@@ -81,6 +87,9 @@ public class PlayerController : MonoBehaviour
                
                 LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
                 RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
+                isLeftArmUp = false;
+                isRightArmUp = false;
+
                 leftspring.spring = 0;
 
 
