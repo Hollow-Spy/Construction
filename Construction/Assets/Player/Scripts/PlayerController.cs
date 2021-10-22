@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float SpeedStrengh;
     [SerializeField] float ArmStrengh;
+    [SerializeField] float jumpforce;
     public int targetfps;
     public bool Vysync;
     public Rigidbody torso;
@@ -18,7 +19,10 @@ public class PlayerController : MonoBehaviour
 
     public Transform OGRightArmPos, OGLeftArmPos;
 
+    public static bool Player1canJump,Player2canJump;
+     
     public bool isLeftArmUp, isRightArmUp;
+     bool leftlocked,rightlocked;
     void Awake()
     {
       
@@ -44,19 +48,36 @@ public class PlayerController : MonoBehaviour
         switch(armnum)
         {
             case 1:
-                isRightArmUp = true;
+                if(!rightlocked)
+                {
+                    isRightArmUp = true;
+                    rightlocked = true;
+                }
                 RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 rightspring.spring = 10;
                 break;
             case 0:
-                isLeftArmUp = true;
+                if(!leftlocked)
+                {
+                    isLeftArmUp = true;
+                    leftlocked = true;
+                }
                 LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 leftspring.spring = 10;
 
                 break;
             case 2:
-                isLeftArmUp = true;
-                isRightArmUp = true;
+                if(!leftlocked)
+                {
+                    isLeftArmUp = true;
+                    leftlocked = true;
+                }
+                if(!rightlocked)
+                {
+                    isRightArmUp = true;
+                    rightlocked = true;
+                }
+               
                 LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 rightspring.spring = 10;
@@ -67,24 +88,38 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void Jump()
+    {
+        if(Player1canJump && Player2canJump)
+        {
+            torso.AddForce(transform.up * jumpforce, ForceMode.Impulse)
+;        }
+    }
+
     public void MoveArmDown(int armnum)
     {
         switch (armnum)
         {
             case 1:
+              
                 RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
                 isRightArmUp = false;
+                rightlocked = false;
                 rightspring.spring = 0;
 
                 break;
             case 0:
                 LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
                 isLeftArmUp = false;
+                leftlocked = false;
+
                 leftspring.spring = 0;
 
                 break;
             case 2:
-               
+                rightlocked = false;
+                leftlocked = false;
+
                 LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
                 RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
                 isLeftArmUp = false;

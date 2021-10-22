@@ -57,7 +57,7 @@ public class InputCollector : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.E))
             {
-                Debug.Log("up");
+             
 
                 controller.MoveArmUp(0);
 
@@ -82,6 +82,11 @@ public class InputCollector : MonoBehaviour
 
             }
 
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            controller.Jump();
         }
 
         controller.MoveCharacter(Horizontal, Vertical);
