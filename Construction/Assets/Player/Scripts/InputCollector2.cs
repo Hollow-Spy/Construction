@@ -9,8 +9,19 @@ public class InputCollector2 : MonoBehaviour
     float Horizontal;
     float Vertical;
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            controller.RagdollPlayer();
+        }
+
+
+        if(controller.ragdolled==false)
+        {
+
+      
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Horizontal = -1;
@@ -43,9 +54,9 @@ public class InputCollector2 : MonoBehaviour
             Vertical = 0;
         }
 
-        if (Input.GetKey(KeyCode.Question) && Input.GetKey(KeyCode.Period))
+        if (Input.GetKey(KeyCode.Keypad2) && Input.GetKey(KeyCode.Keypad5))
         {
-            Debug.Log("up");
+         
 
             controller.MoveArmUp(2);
         }
@@ -68,7 +79,7 @@ public class InputCollector2 : MonoBehaviour
 
         if (!Input.GetKey(KeyCode.Keypad3) && !Input.GetKey(KeyCode.Keypad2))
         {
-            Debug.Log("down");
+        
             controller.MoveArmDown(2);
         }
         else
@@ -90,8 +101,13 @@ public class InputCollector2 : MonoBehaviour
         {
             controller.Jump();
         }
-
         controller.MoveCharacter(Horizontal, Vertical);
+
+        }
+
+
+
+
     }
 
 }

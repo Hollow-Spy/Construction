@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public Transform OGRightArmPos, OGLeftArmPos;
 
     public static bool Player1canJump,Player2canJump;
-     
+    public bool ragdolled;
     public bool isLeftArmUp, isRightArmUp;
      bool leftlocked,rightlocked;
     void Awake()
@@ -41,6 +41,30 @@ public class PlayerController : MonoBehaviour
             Application.targetFrameRate = targetfps;
 
         }
+    }
+
+    public void RagdollPlayer()
+    {
+    
+            if (ragdolled == true)
+            {
+          
+                ragdolled = false;
+            }
+            else
+            {
+                ragdolled = true;
+
+            }
+
+            CopyLimb[] limbs = transform.GetComponentsInChildren<CopyLimb>();
+            for (int i = 0; i < limbs.Length; i++)
+            {
+                limbs[i].Ragdoll();
+            }
+        
+
+       
     }
 
     public void MoveArmUp(int armnum)

@@ -7,9 +7,10 @@ public class Grab : MonoBehaviour
     public PlayerController playercontroller;
     [SerializeField] bool RightHand;
     bool grabbing;
-    [SerializeField] LayerMask movablemask, unmovable;
+    [SerializeField] LayerMask movablemask, unmovable,charactermask;
     SpringJoint handspringjoint;
     HingeJoint objectspringjoint;
+
 
     private void Update()
     {
@@ -94,6 +95,18 @@ public class Grab : MonoBehaviour
                 objectspringjoint.breakTorque = 90000;
                 
             }
+            if (charactermask == (charactermask | (1 << collision.gameObject.layer)) && !handspringjoint)
+            {
+                //put sounds
+                Debug.Log("grab");
+                grabbing = true;
+                handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                handspringjoint.breakForce = 500;
+                handspringjoint.breakTorque = 500;
+                handspringjoint.spring = 500;
+                handspringjoint.massScale = 0.25f;
+            }
 
         }
 
@@ -118,6 +131,18 @@ public class Grab : MonoBehaviour
                 objectspringjoint.breakForce = 90000;
                 objectspringjoint.breakTorque = 90000;
 
+            }
+            if (charactermask == (charactermask | (1 << collision.gameObject.layer)) && !handspringjoint)
+            {
+                //put sounds
+                Debug.Log("grab");
+                grabbing = true;
+                handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                handspringjoint.breakForce = 500;
+                handspringjoint.breakTorque = 500;
+                handspringjoint.spring = 500;
+                handspringjoint.massScale = 0.25f;
             }
 
         }

@@ -10,8 +10,17 @@ public class InputCollector : MonoBehaviour
     float Horizontal;
     float Vertical;
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            controller.RagdollPlayer();
+        }
+
+        if(controller.ragdolled==false)
+        {
+
+      
         if (Input.GetKey(KeyCode.A))
         {
             Horizontal = -1;
@@ -84,7 +93,9 @@ public class InputCollector : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+    
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             controller.Jump();
         }
@@ -92,6 +103,6 @@ public class InputCollector : MonoBehaviour
         controller.MoveCharacter(Horizontal, Vertical);
     }
 
-  
+    }
 
 }
