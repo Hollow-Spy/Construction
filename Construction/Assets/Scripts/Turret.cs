@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour
     public GameObject firePoint;//this game object is used to spawn the nailPrefab which will hit the player
     public GameObject nailPrefab;
     public float speed = 20f;//determines the speed of the projectile
+    public ParticleSystem Spark;
     
     
 
@@ -29,9 +30,11 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {     
-        GameObject nailStart = Instantiate(nailPrefab, firePoint.transform.position, Quaternion.identity);//this code will allow the nailPrefab to spawn 
+        Spark.Play();
+        GameObject nailStart = Instantiate(nailPrefab, firePoint.transform.position, firePoint.transform.rotation);//this code will allow the nailPrefab to spawn 
         Rigidbody nailProjectile = nailStart.GetComponent<Rigidbody>();//This calls for the nailStarts(nailPrefab) Rigidbody so we can handle the force and speed of the projectile.
         nailProjectile.AddForce(Vector3.right * speed);//This handles the speed of the nailPrefab projectile
+        
 
         //link to documentation for Vector3.right: https://docs.unity3d.com/ScriptReference/Vector3-right.html
     }
