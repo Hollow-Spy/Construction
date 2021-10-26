@@ -6,19 +6,20 @@ public class JumpTrigger : MonoBehaviour
 {
     [SerializeField] bool player1;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(player1)
+        if (player1)
         {
             PlayerController.Player1canJump = true;
 
         }
         else
         {
-           PlayerController.Player2canJump = true;
+            PlayerController.Player2canJump = true;
 
         }
     }
+   
     private void OnTriggerExit(Collider other)
     {
         if (player1)
