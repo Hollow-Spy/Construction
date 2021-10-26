@@ -12,19 +12,35 @@ public class PlayerController : MonoBehaviour
     public Rigidbody torso;
     public GameObject Rig;
     public Animator animator;
-    public Transform PullPos;
-    public Transform LeftArm;
-    public Transform RightArm;
-    public SpringJoint rightspring,leftspring;
+    [SerializeField] public float armreach;
 
-    public Transform OGRightArmPos, OGLeftArmPos;
+    public ConfigurableJoint Leftupperarm,Rightupperarm;
+
+   
 
     public static bool Player1canJump,Player2canJump;
     public bool ragdolled;
     public bool isLeftArmUp, isRightArmUp;
      bool leftlocked,rightlocked;
+
+    float armheight=.5f;
+
+
+    JointDrive newarmstrengh;
+  
+
+    JointDrive OGnewarmstrengh;
+
+
+
     void Awake()
     {
+        OGnewarmstrengh = Leftupperarm.angularXDrive;
+       
+
+        
+        newarmstrengh.maximumForce = Leftupperarm.angularXDrive.maximumForce ;
+        newarmstrengh.positionSpring = ArmStrengh;
       
         int vsyncNum;
         if(Vysync)
@@ -57,7 +73,10 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            CopyLimb[] limbs = transform.GetComponentsInChildren<CopyLimb>();
+        isRightArmUp = false;
+        isLeftArmUp = false;
+
+        CopyLimb[] limbs = transform.GetComponentsInChildren<CopyLimb>();
             for (int i = 0; i < limbs.Length; i++)
             {
                 limbs[i].Ragdoll();
@@ -72,104 +91,180 @@ public class PlayerController : MonoBehaviour
         switch(armnum)
         {
             case 1:
-                if(!rightlocked)
+                if(isRightArmUp)
+                {
+                    isRightArmUp = false;
+                }
+                else
                 {
                     isRightArmUp = true;
-                    rightlocked = true;
+
                 }
-                RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
+                break;
+            case 0:
+                if (isLeftArmUp)
+                {
+                    isLeftArmUp = false;
+                }
+                else
+                {
+                    isLeftArmUp = true;
+
+                }
+                break;
+        }
+
+
+
+       /* switch(armnum)
+        {
+            case 1:
+             //   if(!rightlocked)
+             //   {
+             
+                    isRightArmUp = true;
+                 //   rightlocked = true;
+            //    }
+                
+                RightArm.position = Vector3.MoveTowards(RightArm.position , PullPos.position, ArmStrengh * Time.deltaTime) ;
                 rightspring.spring = 10;
                 break;
             case 0:
-                if(!leftlocked)
-                {
+            //    if(!leftlocked)
+              //  {
                     isLeftArmUp = true;
-                    leftlocked = true;
-                }
+                  //  leftlocked = true;
+              //  }
                 LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
                 leftspring.spring = 10;
 
                 break;
-            case 2:
-                if(!leftlocked)
-                {
-                    isLeftArmUp = true;
-                    leftlocked = true;
-                }
-                if(!rightlocked)
-                {
-                    isRightArmUp = true;
-                    rightlocked = true;
-                }
-               
-                LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
-                RightArm.position = Vector3.MoveTowards(RightArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
-                rightspring.spring = 10;
-                leftspring.spring = 10;
-                break;
+           
 
         }
-
+       */
     }
+
+
+
+
 
     public void Jump()
     {
         if(Player1canJump && Player2canJump)
         {
-            torso.AddForce(transform.up * jumpforce, ForceMode.Impulse)
-;        }
+            torso.AddForce(transform.up * jumpforce, ForceMode.Impulse);    
+        }
     }
 
     public void MoveArmDown(int armnum)
     {
+        Quaternion quart = new Quaternion(0, 0, 0, 1);
         switch (armnum)
         {
             case 1:
+                Rightupperarm.angularXDrive = OGnewarmstrengh;
+                Rightupperarm.angularYZDrive = OGnewarmstrengh;
+
+                Rightupperarm.targetRotation = quart;
               
-                RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
-                isRightArmUp = false;
                 rightlocked = false;
-                rightspring.spring = 0;
+                //rightspring.spring = 0;
 
                 break;
             case 0:
-                LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
-                isLeftArmUp = false;
+                Leftupperarm.angularXDrive = OGnewarmstrengh;
+                Leftupperarm.angularYZDrive = OGnewarmstrengh;
+
+                Leftupperarm.targetRotation = quart;
+              
+            
                 leftlocked = false;
 
-                leftspring.spring = 0;
+                //leftspring.spring = 0;
 
                 break;
-            case 2:
-                rightlocked = false;
-                leftlocked = false;
+          
 
-                LeftArm.localPosition = Vector3.MoveTowards(LeftArm.localPosition, OGLeftArmPos.localPosition, ArmStrengh * Time.deltaTime);
-                RightArm.localPosition = Vector3.MoveTowards(RightArm.localPosition, OGRightArmPos.localPosition, ArmStrengh * Time.deltaTime);
-                isLeftArmUp = false;
-                isRightArmUp = false;
-
-                leftspring.spring = 0;
-
-
-                rightspring.spring = 0;
-                break;
 
         }
     }
    
-   
 
-   public void MoveCharacter(float horizontal, float vertical)
+    public void ArmMovement()
     {
        
 
-        if(horizontal == 0)
+        if (isLeftArmUp)
+        {
+            
+            
+            Quaternion quart = new Quaternion(0, 0, armheight, 1);
+
+            Leftupperarm.angularXDrive = newarmstrengh;
+            Leftupperarm.angularYZDrive = newarmstrengh;
+
+            Leftupperarm.targetRotation = quart;
+
+           
+        }
+        else
+        {
+            MoveArmDown(0);
+        }
+
+        if (isRightArmUp)
+        {
+
+            Rightupperarm.angularXDrive = newarmstrengh;
+            Rightupperarm.angularYZDrive = newarmstrengh;
+
+            Quaternion quart = new Quaternion(0, 0, -armheight, 1);
+
+            Rightupperarm.targetRotation = quart;
+
+
+
+        }
+        else
+        {
+            MoveArmDown(1);
+        }
+
+
+    }
+
+
+
+
+    public void MoveCharacter(float horizontal, float vertical)
+    {
+
+        if (vertical != 0)
+        {
+            Debug.Log(armheight);
+            if (vertical > 0 && armheight >= -armreach)
+            {
+                armheight -= 2 *Time.deltaTime;
+            }
+            else
+            {
+                if (vertical < 0 && armheight <= armreach)
+                {
+                    armheight += 2 * Time.deltaTime;
+
+                }
+            }
+
+        }
+
+
+        if (horizontal == 0)
         {
             animator.SetBool("run", false);
             return;
         }
-     
+
             
     
         animator.SetBool("run", true);

@@ -54,54 +54,28 @@ public class InputCollector2 : MonoBehaviour
             Vertical = 0;
         }
 
-        if (Input.GetKey(KeyCode.Keypad2) && Input.GetKey(KeyCode.Keypad5))
-        {
-         
 
-            controller.MoveArmUp(2);
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.Keypad2))
+
+            if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 controller.MoveArmUp(1);
 
             }
-            if (Input.GetKey(KeyCode.Keypad3))
+            if (Input.GetKeyDown(KeyCode.Keypad3))
             {
-
-
                 controller.MoveArmUp(0);
 
             }
 
-        }
 
-        if (!Input.GetKey(KeyCode.Keypad3) && !Input.GetKey(KeyCode.Keypad2))
-        {
-        
-            controller.MoveArmDown(2);
-        }
-        else
-        {
-            if (!Input.GetKey(KeyCode.Keypad2))
-            {
-                controller.MoveArmDown(1);
-
-            }
-            if (!Input.GetKey(KeyCode.Keypad3))
-            {
-                controller.MoveArmDown(0);
-
-            }
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
         {
             controller.Jump();
         }
+
+
         controller.MoveCharacter(Horizontal, Vertical);
+            controller.ArmMovement();
 
         }
 

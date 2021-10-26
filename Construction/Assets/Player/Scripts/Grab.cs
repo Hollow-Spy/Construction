@@ -20,8 +20,10 @@ public class Grab : MonoBehaviour
             {
                 grabbing = false;
 
+             
                 if (handspringjoint)
                 {
+                    Debug.Log("broke");
                     Destroy(handspringjoint);
                 }
                 if (objectspringjoint)

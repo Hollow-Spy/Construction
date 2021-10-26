@@ -53,45 +53,21 @@ public class InputCollector : MonoBehaviour
             Vertical = 0;
         }
 
-        if(Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E) )
-        {
-            controller.MoveArmUp(2);
-        }
-        else
-        {
-            if(Input.GetKey(KeyCode.Q))
+      
+        
+     
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 controller.MoveArmUp(1);
 
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-             
-
                 controller.MoveArmUp(0);
 
             }
 
-        }
         
-        if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
-        {
-            controller.MoveArmDown(2);
-        }
-        else
-        {
-            if (!Input.GetKey(KeyCode.Q))
-            {
-                controller.MoveArmDown(1);
-
-            }
-            if (!Input.GetKey(KeyCode.E))
-            {
-                controller.MoveArmDown(0);
-
-            }
-
-        }
 
     
 
@@ -101,7 +77,9 @@ public class InputCollector : MonoBehaviour
         }
 
         controller.MoveCharacter(Horizontal, Vertical);
+         controller.ArmMovement();
     }
+
 
     }
 
