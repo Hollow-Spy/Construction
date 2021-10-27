@@ -53,11 +53,15 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\levertrigger.cs" />
+    <Compile Include="Assets\Scripts\wreckingball.cs" />
     <Compile Include="Assets\Player\Scripts\InputCollector.cs" />
+    <Compile Include="Assets\Scripts\wallscript.cs" />
     <Compile Include="Assets\Player\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\CraneLine.cs" />
     <Compile Include="Assets\Player\Scripts\InputCollector2.cs" />
+    <Compile Include="Assets\Scripts\leverscript.cs" />
     <Compile Include="Assets\Tutorial\DestroyOnTouch.cs" />
     <Compile Include="Assets\Tutorial\LadderUp.cs" />
     <Compile Include="Assets\Scripts\CraneMovement.cs" />
@@ -68,10 +72,9 @@
     <Compile Include="Assets\Player\Scripts\JumpTrigger.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Player\Scripts\Grab.cs" />
-    <Compile Include="Assets\Scripts\wallscript.cs" />
-    <Compile Include="Assets\Scripts\leverscript.cs" />
-    <Compile Include="Assets\Scripts\levertrigger.cs" />
-    <Compile Include="Assets\Scripts\wreckingball.cs" />
+    <Compile Include="Assets\Scripts\CheckpointManager.cs" />
+    <Compile Include="Assets\Scripts\CheckpointTrigger.cs" />
+    <Compile Include="Assets\Scripts\DeathScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

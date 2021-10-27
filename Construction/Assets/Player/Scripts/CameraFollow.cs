@@ -16,39 +16,68 @@ public class CameraFollow : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		Vector3 desiredPosition = Vector3.zero;
-		if (FollowBoth)
+		if(CheckpointManager.isPlayer1Alive && CheckpointManager.isPlayer2Alive)
         {
-			bothdistance = Vector3.Distance(player1Spine.position, player2Spine.position) * distanceScale;
-			desiredPosition = new Vector3((player1Spine.position.x + player2Spine.position.x) / 2, (player1Spine.position.y + player2Spine.position.y) / 2, bothdistance) + offset;
-			 
-
-		}
-		else
-        {
-			if (Player1)
+			if (!player1Spine)
 			{
+				var player = GameObject.Find("Player1");
+				if (player != null)
+				{
+
+					player1Spine = GameObject.Find("Player1").GetComponentInChildren<PlayerController>().torso.transform;
+
+				}
 
 			}
-            else
-            {
-				if (Player2)
+			if (!player2Spine)
+			{
+				var player = GameObject.Find("Player2");
+				if (player != null)
+				{
+					player2Spine = GameObject.Find("Player2").GetComponentInChildren<PlayerController>().torso.transform;
+
+				}
+			}
+
+			Vector3 desiredPosition = Vector3.zero;
+			if (FollowBoth && player1Spine && player2Spine)
+			{
+				bothdistance = Vector3.Distance(player1Spine.position, player2Spine.position) * distanceScale;
+				desiredPosition = new Vector3((player1Spine.position.x + player2Spine.position.x) / 2, (player1Spine.position.y + player2Spine.position.y) / 2, bothdistance) + offset;
+
+
+			}
+			else
+			{
+				if (Player1)
 				{
 
 				}
-                else
-                {
-					desiredPosition = target.position + offset;
+				else
+				{
+					if (Player2)
+					{
+
+					}
+					else
+					{
+						if (target)
+						{
+							desiredPosition = target.position + offset;
+
+						}
+					}
 				}
 			}
+
+
+
+
+
+			Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+			transform.position = smoothedPosition;
 		}
-
-
-
-
-
-		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-		transform.position = smoothedPosition;
+		
 
 		//transform.LookAt(target);
 

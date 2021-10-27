@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public ConfigurableJoint Leftupperarm,Rightupperarm;
 
-   
+    [SerializeField] bool isPlayer1;
 
     public static bool Player1canJump,Player2canJump;
     public bool ragdolled;
@@ -31,6 +31,19 @@ public class PlayerController : MonoBehaviour
 
     JointDrive OGnewarmstrengh;
 
+    private void OnDestroy()
+    {
+        if(isPlayer1)
+        {
+            CheckpointManager.isPlayer1Alive = false;
+           
+        }else
+        {
+            CheckpointManager.isPlayer2Alive = false;
+
+        }
+        GameObject.FindGameObjectWithTag("GameController").SendMessage("Respawn");
+    }
 
 
     void Awake()
