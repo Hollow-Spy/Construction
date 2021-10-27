@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
 
         if (vertical != 0)
         {
-            Debug.Log(armheight);
+       
             if (vertical > 0 && armheight >= -armreach)
             {
                 armheight -= 2 *Time.deltaTime;

@@ -125,5 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b15ebbc9a83984ba0b2488f8e018e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: -45483904854263005}
+  characterMask:
+    serializedVersion: 2
+    m_Bits: 264
+  nailhit: {fileID: 7776667223292787454, guid: aedb02025c5936843b45eae61d8b0e05, type: 3}

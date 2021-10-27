@@ -65,6 +65,9 @@
     <Compile Include="Assets\Player\Scripts\JumpTrigger.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Player\Scripts\Grab.cs" />
+    <Compile Include="Assets\Tutorial\DestroyOnTouch.cs" />
+    <Compile Include="Assets\Tutorial\LadderUp.cs" />
+    <Compile Include="Assets\Player\nailhit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
