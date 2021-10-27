@@ -22,6 +22,11 @@ public class ButtonActivation : MonoBehaviour
         machine.GetComponent<CraneMovement>().activator = true;
 
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        machine.GetComponent<CraneMovement>().activator = true;
+
+    }
     private void OnCollisionExit(Collision collision)
     {
         machine.GetComponent<CraneMovement>().activator = false;
