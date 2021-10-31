@@ -51,12 +51,14 @@ public class CameraFollow : MonoBehaviour
 			{
 				if (Player1)
 				{
-
+					desiredPosition = player1Spine.position + offset;
 				}
 				else
 				{
 					if (Player2)
 					{
+						desiredPosition = player2Spine.position + offset;
+
 
 					}
 					else
