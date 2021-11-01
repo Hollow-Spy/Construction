@@ -51,6 +51,7 @@ public class CameraFollow : MonoBehaviour
 			{
 				if (Player1)
 				{
+					Debug.Log("g");
 					desiredPosition = player1Spine.position + offset;
 				}
 				else
