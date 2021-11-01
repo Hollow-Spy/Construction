@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\DeathScript.cs" />
     <Compile Include="Assets\Scripts\elevatorbutton.cs" />
     <Compile Include="Assets\Player\Scripts\InputCollector2.cs" />
+    <Compile Include="Assets\Scripts\LadderUpMichal.cs" />
     <Compile Include="Assets\Scripts\leverscript.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\Quit.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\Button2.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Player\Scripts\Grab.cs" />
+    <Compile Include="Assets\Scripts\Zipline.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
