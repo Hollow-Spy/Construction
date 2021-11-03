@@ -10,8 +10,19 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("tutorial");
     }
-    public void FirstLevel()
+    public void ThirdLevel()
     {
         SceneManager.LoadScene("DanielTest 2");
     }
+    public void SecondLevel()
+    {
+        SceneManager.LoadScene("KianTest");
+    }
+    public void firstLevel()
+    {
+        SceneManager.LoadScene("MichalTestMain");
+    }
+   
+    
+
 }
