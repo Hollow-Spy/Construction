@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\CraneMovement.cs" />
     <Compile Include="Assets\Player\Scripts\CopyLimb.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Player\nailhit.cs" />
     <Compile Include="Assets\Scripts\PopupMenu.cs" />
     <Compile Include="Assets\Scripts\ButtonActivation.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Scripts\Button2.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Player\Scripts\Grab.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class elevator : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class elevator : MonoBehaviour
     }
     private void Update()
     {
-
+     
         {
             if (activated)
             {
@@ -24,8 +25,20 @@ public class elevator : MonoBehaviour
                 if (elevatorDoor.gameObject.transform.localScale.z <= .3f && !endGame.activeSelf)
                 {
                     endGame.SetActive(true);
+                    StartCoroutine(GoToMenu(1.6f));
+
                 }
             }
         }
     }
+
+    IEnumerator GoToMenu(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        SceneManager.LoadScene("Menu");
+    }
+
+
+
 }
