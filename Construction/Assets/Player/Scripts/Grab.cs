@@ -81,17 +81,23 @@ public class Grab : MonoBehaviour
             {
                 grabbing = true;
                 handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.anchor = Vector3.zero;
+                handspringjoint.autoConfigureConnectedAnchor = false;
+                handspringjoint.connectedAnchor = collision.transform.InverseTransformPoint(transform.position);
                 handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                handspringjoint.breakForce = 100;
-                handspringjoint.breakTorque = 100;
+                handspringjoint.breakForce = 400;
+                handspringjoint.breakTorque = 400;
                 handspringjoint.spring = 100;
             }
             if (unmovable == (unmovable | (1 << collision.gameObject.layer)) && !objectspringjoint)
             {
-               
+                
                 grabbing = true;
 
                 objectspringjoint = collision.gameObject.AddComponent<HingeJoint>();
+                objectspringjoint.anchor = objectspringjoint.transform.InverseTransformPoint(transform.position);
+                objectspringjoint.autoConfigureConnectedAnchor = false;
+                objectspringjoint.connectedAnchor = Vector3.zero;
                 objectspringjoint.connectedBody = this.transform.parent.GetComponent<Rigidbody>();
                 objectspringjoint.breakForce = 90000;
                 objectspringjoint.breakTorque = 90000;
@@ -103,9 +109,12 @@ public class Grab : MonoBehaviour
                 Debug.Log("grab");
                 grabbing = true;
                 handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.anchor = handspringjoint.transform.InverseTransformPoint(transform.position);
+                handspringjoint.autoConfigureConnectedAnchor = false;
+                handspringjoint.connectedAnchor = Vector3.zero;
                 handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                handspringjoint.breakForce = 500;
-                handspringjoint.breakTorque = 500;
+                handspringjoint.breakForce = 700;
+                handspringjoint.breakTorque = 700;
                 handspringjoint.spring = 500;
                 handspringjoint.massScale = 0.25f;
             }
@@ -118,17 +127,23 @@ public class Grab : MonoBehaviour
             {
                 grabbing = true;
                 handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.anchor = Vector3.zero;
+                handspringjoint.autoConfigureConnectedAnchor = false;
+                handspringjoint.connectedAnchor = collision.transform.InverseTransformPoint(transform.position);
                 handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                handspringjoint.breakForce = 100;
-                handspringjoint.breakTorque = 100;
+                handspringjoint.breakForce = 400;
+                handspringjoint.breakTorque = 400;
                 handspringjoint.spring = 100;
 
             }
             if (unmovable == (unmovable | (1 << collision.gameObject.layer)) && !objectspringjoint)
             {
                 grabbing = true;
-
+               
                 objectspringjoint = collision.gameObject.AddComponent<HingeJoint>();
+                objectspringjoint.anchor = objectspringjoint.transform.InverseTransformPoint(transform.position);
+                objectspringjoint.autoConfigureConnectedAnchor = false;
+                objectspringjoint.connectedAnchor = Vector3.zero;
                 objectspringjoint.connectedBody = this.transform.parent.GetComponent<Rigidbody>();
                 objectspringjoint.breakForce = 90000;
                 objectspringjoint.breakTorque = 90000;
@@ -140,9 +155,12 @@ public class Grab : MonoBehaviour
                 Debug.Log("grab");
                 grabbing = true;
                 handspringjoint = this.gameObject.AddComponent<SpringJoint>();
+                handspringjoint.anchor = handspringjoint.transform.InverseTransformPoint(transform.position);
+                handspringjoint.autoConfigureConnectedAnchor = false;
+                handspringjoint.connectedAnchor = Vector3.zero;
                 handspringjoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                handspringjoint.breakForce = 500;
-                handspringjoint.breakTorque = 500;
+                handspringjoint.breakForce = 700;
+                handspringjoint.breakTorque = 700;
                 handspringjoint.spring = 500;
                 handspringjoint.massScale = 0.25f;
             }
