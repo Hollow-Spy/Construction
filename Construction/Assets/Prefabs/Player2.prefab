@@ -1033,6 +1033,8 @@ GameObject:
   - component: {fileID: 2405961694878452322}
   - component: {fileID: 2405961694878452334}
   - component: {fileID: 2405961694878452335}
+  - component: {fileID: 106142072442017944}
+  - component: {fileID: 1135030544778057218}
   m_Layer: 8
   m_Name: hand.R
   m_TagString: Untagged
@@ -1182,6 +1184,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &106142072442017944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961694878452324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: -6.170012e-11, y: 0.003254848, z: 1.6763806e-10}
+--- !u!114 &1135030544778057218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961694878452324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 0, y: 0, z: 0}
 --- !u!1 &2405961694949935996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1396,8 @@ GameObject:
   - component: {fileID: 2405961694974610382}
   - component: {fileID: 2405961694974610379}
   - component: {fileID: 2405961694974610380}
+  - component: {fileID: 7557511842728694277}
+  - component: {fileID: 8236274890987780913}
   m_Layer: 8
   m_Name: hand.L
   m_TagString: Untagged
@@ -1517,6 +1547,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7557511842728694277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961694974610368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: -3.259629e-10, y: 0.003186864, z: -1.2107193e-10}
+--- !u!114 &8236274890987780913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961694974610368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 0, y: 0, z: 0}
 --- !u!1 &2405961695042496095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1598,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2405961695042496095}
-  m_LocalRotation: {x: -0, y: 0.72270525, z: -0, w: 0.6911564}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
@@ -1917,6 +1973,7 @@ GameObject:
   - component: {fileID: 2405961695537731745}
   - component: {fileID: 2405961695537731746}
   - component: {fileID: 2405961695537731747}
+  - component: {fileID: 4451169221419542669}
   m_Layer: 8
   m_Name: spine/jump
   m_TagString: Player
@@ -2096,6 +2153,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: 0
+--- !u!114 &4451169221419542669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961695537731750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c0b10e5c849594c93e48a5a83fc877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2405961695564315204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2337,8 @@ GameObject:
   - component: {fileID: 2405961695573811922}
   - component: {fileID: 2405961695573811935}
   - component: {fileID: 2405961695573811920}
+  - component: {fileID: 5704294277960154390}
+  - component: {fileID: 6305342881653556828}
   m_Layer: 8
   m_Name: upper_arm.R
   m_TagString: Untagged
@@ -2416,6 +2487,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5704294277960154390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961695573811924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: -0.000218524, y: 0.002247111, z: 0.0004278728}
+--- !u!114 &6305342881653556828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961695573811924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 342.8667, y: 97.02515, z: 7.479755}
 --- !u!1 &2405961695589881001
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,6 +4853,8 @@ GameObject:
   - component: {fileID: 2405961696669386268}
   - component: {fileID: 2405961696669386269}
   - component: {fileID: 2405961696669386270}
+  - component: {fileID: 8888707038511661150}
+  - component: {fileID: 751145481246497476}
   m_Layer: 8
   m_Name: forearm.L
   m_TagString: Untagged
@@ -4904,6 +5003,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8888707038511661150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696669386257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 338.771, y: 7.525099, z: 7.000146}
+--- !u!114 &751145481246497476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696669386257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: 4.1909514e-11, y: 0.0026269883, z: -1.4901161e-10}
 --- !u!1 &2405961696726073770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,6 +5231,8 @@ GameObject:
   - component: {fileID: 2405961696726964874}
   - component: {fileID: 2405961696726964875}
   - component: {fileID: 2405961696726964876}
+  - component: {fileID: 8917310934774357949}
+  - component: {fileID: 4256551891003207196}
   m_Layer: 8
   m_Name: upper_arm.L
   m_TagString: Untagged
@@ -5254,6 +5381,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8917310934774357949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696726964879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: 0.00014373717, y: 0.0021197868, z: 0.00026011575}
+--- !u!114 &4256551891003207196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696726964879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 342.27695, y: 263.29376, z: 351.1514}
 --- !u!1 &2405961696735309073
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,6 +5799,8 @@ GameObject:
   - component: {fileID: 2405961696877264118}
   - component: {fileID: 2405961696877264115}
   - component: {fileID: 2405961696877264116}
+  - component: {fileID: 9167313932487653696}
+  - component: {fileID: 3534998917134991960}
   m_Layer: 8
   m_Name: forearm.R
   m_TagString: Untagged
@@ -5794,6 +5949,32 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &9167313932487653696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696877263880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4d42fa9b0944d94ad85e2a0b49be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionReset: {x: 4.8894433e-10, y: 0.0025299718, z: 0}
+--- !u!114 &3534998917134991960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405961696877263880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a305705ff02844e99904beb4e70e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationReset: {x: 338.29156, y: 352.31522, z: 350.9987}
 --- !u!1 &2405961696896972943
 GameObject:
   m_ObjectHideFlags: 0

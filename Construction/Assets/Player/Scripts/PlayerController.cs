@@ -94,9 +94,18 @@ public class PlayerController : MonoBehaviour
             {
                 limbs[i].Ragdoll();
             }
-        
 
-       
+        ResetRotation[] rots = transform.GetComponentsInChildren<ResetRotation>();
+        for (int i = 0; i < rots.Length; i++)
+        {
+            rots[i].resetRot();
+        }
+        ResetPosition[] poss = transform.GetComponentsInChildren<ResetPosition>();
+        for (int i = 0; i < rots.Length; i++)
+        {
+            poss[i].resetPos();
+        }
+
     }
 
     public void MoveArmUp(int armnum)
