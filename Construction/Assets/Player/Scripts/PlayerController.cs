@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
             CheckpointManager.isPlayer2Alive = false;
 
         }
-        GameObject.FindGameObjectWithTag("GameController").SendMessage("Respawn");
+       // GameObject.FindGameObjectWithTag("GameController").SendMessage("Respawn");
+        FindObjectOfType<CheckpointManager>().Respawn();
     }
 
 

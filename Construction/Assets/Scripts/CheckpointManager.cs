@@ -43,16 +43,17 @@ public class CheckpointManager : MonoBehaviour
         
         if(!isPlayer1Alive)
         {
-            
+            Instantiate(RespawnParticles, spawnpoint, RespawnParticles.transform.rotation);
             Instantiate(player1, spawnpoint, Quaternion.identity);
             isPlayer1Alive = true;
         }
         if(!isPlayer2Alive)
         {
+            Instantiate(RespawnParticles, spawnpoint2, RespawnParticles.transform.rotation);
             Instantiate(player2, spawnpoint2, Quaternion.identity);
             isPlayer2Alive = true;
         }
-        Instantiate(RespawnParticles, spawnpoint, RespawnParticles.transform.rotation);
+      
     }
 
 }
