@@ -11,19 +11,20 @@ public class Grab : MonoBehaviour
     SpringJoint handspringjoint;
     HingeJoint objectspringjoint;
 
-
+    [SerializeField] GameObject LeftCircle, RightCircle,RightHandObj,LeftHandObj;
     private void Update()
     {
         if(!RightHand)
         {
             if (!playercontroller.isLeftArmUp)
             {
+                LeftHandObj.SetActive(false);
                 grabbing = false;
+                LeftCircle.SetActive(false);
 
-             
                 if (handspringjoint)
                 {
-                    Debug.Log("broke");
+                    
                     Destroy(handspringjoint);
                 }
                 if (objectspringjoint)
@@ -32,9 +33,21 @@ public class Grab : MonoBehaviour
                 }
 
             }
-           if(grabbing && (!handspringjoint && !objectspringjoint))
+            else
             {
-                playercontroller.isLeftArmUp = false;
+   
+                LeftHandObj.SetActive(true) ;
+
+            }
+
+            if (grabbing )
+            {
+                LeftCircle.SetActive(true);
+
+                if( (!handspringjoint && !objectspringjoint))
+                {
+                    playercontroller.isLeftArmUp = false;
+                }
             }
 
         }
@@ -43,7 +56,8 @@ public class Grab : MonoBehaviour
             if (!playercontroller.isRightArmUp)
             {
                 grabbing = false;
-
+                RightCircle.SetActive(false);
+                RightHandObj.SetActive(false);
                 if (handspringjoint)
                 {
                     Destroy(handspringjoint);
@@ -54,9 +68,19 @@ public class Grab : MonoBehaviour
                 }
 
             }
-            if (grabbing && (!handspringjoint && !objectspringjoint))
+            else
             {
-                playercontroller.isRightArmUp = false;
+                RightHandObj.SetActive(true);
+
+            }
+            if (grabbing)
+            {
+                RightCircle.SetActive(true);
+
+                if ((!handspringjoint && !objectspringjoint))
+                {
+                    playercontroller.isLeftArmUp = false;
+                }
             }
 
         }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MichalTestMain.unity
+- path: Assets/Scenes/Playercontroll.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

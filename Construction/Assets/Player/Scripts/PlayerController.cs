@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     JointDrive OGnewarmstrengh;
 
+   
+
     private void OnDestroy()
     {
         if(isPlayer1)
@@ -138,34 +140,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
-       /* switch(armnum)
-        {
-            case 1:
-             //   if(!rightlocked)
-             //   {
-             
-                    isRightArmUp = true;
-                 //   rightlocked = true;
-            //    }
-                
-                RightArm.position = Vector3.MoveTowards(RightArm.position , PullPos.position, ArmStrengh * Time.deltaTime) ;
-                rightspring.spring = 10;
-                break;
-            case 0:
-            //    if(!leftlocked)
-              //  {
-                    isLeftArmUp = true;
-                  //  leftlocked = true;
-              //  }
-                LeftArm.position = Vector3.MoveTowards(LeftArm.position, PullPos.position, ArmStrengh * Time.deltaTime);
-                leftspring.spring = 10;
-
-                break;
-           
-
-        }
-       */
     }
 
 
@@ -265,7 +239,7 @@ public class PlayerController : MonoBehaviour
 
         if (vertical != 0)
         {
-       
+                
             if (vertical > 0 && armheight >= -armreach)
             {
                 armheight -= 2 *Time.deltaTime;
